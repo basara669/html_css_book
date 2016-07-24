@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.Menu {
+    display: flex;
+    justify-content: space-around;
+
+    &__item {
+        display: block;
+        padding: 10px 15px;
+        text-transform: uppercase;
+    }
+    // フッターのメニュー
+    &--sub {
+        flex-direction: column;
+    }
+}

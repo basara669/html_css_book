@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+// =====================
+// 記事ページ固有のスタイル
+// =====================
+
+// 記事全体の構成
+.Article {
+    &__text {
+        margin-bottom: $space-unit*2;
+    }
+    &__image {
+        margin-bottom: $space-unit*2;
+        width: 100%;
+        height: auto;
+    }
+}
+
+// リスト
+.textList {
+    margin-bottom: $space-unit*2;
+    margin-left: $space-unit*2;
+    &__item {
+        list-style: disc;
+    }
+}
+
+// サムネイル付きのアイテム
+.ThumbnailItem {
+    display: flex;
+    align-items: center;
+    padding-bottom: $space-unit;
+    &__thumb {
+        margin-right: $space-unit;
+        width: 80px;
+        height: 80px;
+    }
+}

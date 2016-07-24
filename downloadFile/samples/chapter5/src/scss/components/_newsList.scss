@@ -1,0 +1,24 @@
+@charset 'utf-8';
+
+// =====================
+// NewsList
+// ---------------------
+// お知らせ一覧
+// =====================
+
+.NewsList {
+    display: table;
+    border-spacing: 0 $space-unit/2;
+    border-collapse: separate;
+
+    &__item　{
+        display: table-row;
+    }
+    &__head {
+        display: table-cell;
+        padding-right: $column-space;
+    }
+    &__body {
+        display: table-cell;
+    }
+}

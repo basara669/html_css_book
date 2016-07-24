@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+.button {
+    display: inline-block;
+    padding: 7px 12px;
+    background: $color-reverse-fill;
+    color: $color-reverse-line;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1;
+}

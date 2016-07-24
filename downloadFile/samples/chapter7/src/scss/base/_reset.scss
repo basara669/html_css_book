@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+// ===========================
+// Reset
+// ===========================
+@import "./lib/sanitize";
+
+:root, html, body {
+    background-color: $color-base;
+    color: $color-main-text;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: $color-main-text;
+}
+a:hover {
+    text-decoration: none;
+    color: $color-link;
+}

@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+// =====================
+// IconPanel
+// ---------------------
+// アイコンつきのコンテンツメニュー
+// =====================
+
+.IconPanel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    &__head {
+        padding: $space-unit;
+        text-align: center;
+        font-size: 18px;
+    }
+    &__body {
+        padding: $space-unit*1.5;
+        max-width: 100%;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,32 @@
+@charset 'utf-8';
+
+// ===========================
+// Font mixins
+// ===========================
+
+/// フォント切替mixin(タイトルフォント用)
+@mixin title-font() {
+    font-family: $font-sub;
+    font-weight: 400;
+}
+/// フォント切替mixin(メニュー用)
+@mixin menu-font() {
+    font-family: $font-sub;
+    font-weight: 300;
+}
+
+/// スマートフォン表示用メディアクエリmixin
+/// @param {number} [$sp-max-width] - ブレークポイント
+@mixin mq-sp($max: $sp-max-width) {
+    @media only screen and (max-width: #{$max}) {
+        @content;
+    }
+}
+
+/// デスクトップ表示用メディアクエリmixin
+/// @param {number} [$sp-max-width] - ブレークポイント
+@mixin mq-pc($min: $pc-min-width) {
+    @media only screen and (min-width: #{$min}) {
+        @content;
+    }
+}

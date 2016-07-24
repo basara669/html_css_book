@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Css Cafe</title>
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <header class="Header l-column">
+        <div class="Header__head">
+            <h1 class="logo">Site Name</h1>
+        </div>
+        <nav class="Header__body">
+            <ul class="Menu">
+                <li><a class="Menu__item" href="#">Services</a></li>
+                <li><a class="Menu__item" href="#">Work</a></li>
+                <li><a class="Menu__item" href="#">About us</a></li>
+                <li><a class="Menu__item" href="#">Blog</a></li>
+                <li><a class="Menu__item" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="ImageSlide Section">
+        <ul id="Slide" class="ImageSlide__main">
+            <li class="ImageSlide__item js-slide-item">
+                <a href="#"><img class="ImageSlide__image" src="./dist/images/top/slide1.jpg" alt="about our tea" width="1180" height="490"></a>
+            </li>
+            <li class="ImageSlide__item js-slide-item">
+                <a href="#"><img class="ImageSlide__image" src="./dist/images/top/slide2.jpg" alt="about our coffee" width="1180" height="490"></a>
+            </li>
+            <li class="ImageSlide__item js-slide-item">
+                <a href="#"><img class="ImageSlide__image" src="./dist/images/top/slide3.jpg" alt="about our foods" width="1180" height="490"></a>
+            </li>
+        </ul>
+        <div class="ImageSlide__sub">
+            <span class="ImageSlide__dot js-slide-point">image1</span>
+            <span class="ImageSlide__dot js-slide-point">image2</span>
+            <span class="ImageSlide__dot js-slide-point">image3</span>
+        </div>
+    </div>
+
+    <section class="Section l-column">
+        <div class="l-row">
+            <div class="EntryPanel l-halfColumn">
+                <div class="EntryPanel__sub">
+                    <img class="EntryPanel__thumb" src="./dist/images/top/entry1.jpg" alt="">
+                </div>
+                <div class="EntryPanel__main">
+                    <h3 class="EntryPanel__head">冬のコーヒーギフト</h3>
+                    <div class="EntryPanel__body">
+                        大切なあの方にありがとうを届けたい。心も体も温まる素敵なギフト。プレゼントキャンペーン実施中！
+                    </div>
+                    <div class="EntryPanel__foot"><a href="" class="button">READ MORE</a></div>
+                </div>
+            </div>
+            <div class="EntryPanel l-halfColumn">
+                <div class="EntryPanel__sub">
+                    <img class="EntryPanel__thumb" src="./dist/images/top/entry2.jpg" alt="">
+                </div>
+                <div class="EntryPanel__main">
+                    <h3 class="EntryPanel__head">あの人気店コラボメニュー</h3>
+                    <div class="EntryPanel__body">
+                        今話題の人気店、Macaro’n Thingsのパンケーキを使ったコラボ商品のセットメニューを販売中。
+                    </div>
+                    <div class="EntryPanel__foot"><a href="" class="button">READ MORE</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Section">
+        <h2 class="sectionLabel  l-column">Content</h2>
+        <div class="Section__item l-row">
+            <div class="l-halfTile  IndexPage__drinkMenu">
+                <a href="#" class="OverlayPanel">
+                    <h3 class="OverlayPanel__head">Drink Menu</h3>
+                    <p class="OverlayPanel__body">
+                        定番メニューから、季節に合わせた商品まで品揃え豊富に取り揃えております。あなたのお気に入りを見つけましょう。
+                    </p>
+                </a>
+            </div>
+            <div class="l-halfTile  IndexPage__foodMenu">
+                <a href="#" class="OverlayPanel">
+                    <h3 class="OverlayPanel__head">Food Menu</h3>
+                    <p class="OverlayPanel__body">
+                        サンドイッチ、ケーキ、パスタ、当店自慢のコーヒーと一緒にどうぞ。
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="Section__item l-column">
+            <div class="l-row">
+                <a class="IconPanel  l-quaterColumn">
+                    <h3 class="IconPanel__head">こだわりの空間</h3>
+                    <p class="IconPanel__body">
+                        ランチからディナーまでいつでもリラックスして使えるくつろぎ空間。椅子や壁、細部にまでこだわっています。
+                    </p>
+                </a>
+                <a class="IconPanel  l-quaterColumn">
+                    <h3 class="IconPanel__head">豆へのこだわり</h3>
+                    <p class="IconPanel__body">
+                        原産地、豆の種類、焙煎方法のこだわりを紹介します。
+                    </p>
+                </a>
+                <a class="IconPanel  l-quaterColumn">
+                    <h3 class="IconPanel__head">コーヒースクール</h3>
+                    <p class="IconPanel__body">
+                        コーヒー豆の基礎知識から、美味しいコーヒーを淹れるコツをお教えします。
+                    </p>
+                </a>
+                <a class="IconPanel  l-quaterColumn">
+                    <h3 class="IconPanel__head">BLOG</h3>
+                    <p class="IconPanel__body">
+                        お店の最新情報を、いち早くお届け。
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="Section l-column">
+        <h2 class="sectionLabel">News</h2>
+        <ol class="NewsList">
+            <li class="NewsList__item">
+                <time class="NewsList__head" datatime="2016-10-12">2016.10.12</time>
+                <span class="NewsList__body">「かぼちゃタルト」「ヘーゼルナッツラテ」「ストロベリーブラウニー」「ハニーソイラテ」「たっぷりチーズときのこのパニーニ」新発売。</span>
+            </li>
+            <li class="NewsList__item">
+                <time class="NewsList__head" datatime="2016-09-01">2016.09.01</time>
+                <span class="NewsList__body">営業時間変更に関するお知らせ</span>
+            </li>
+        
+            <li class="NewsList__item">
+                <time class="NewsList__head" datatime="2016-8-20">2016.08.20</time>
+                <span class="NewsList__body">鎌倉店ニューオープン！！</span>
+            </li>
+            <li class="NewsList__item">
+                <time class="NewsList__head" datatime="2016-08-10">2016.08.10</time>
+                <span class="NewsList__body">夏季限定。マンゴースムージー発売</span>
+            </li>
+            <li class="NewsList__item">
+                <time class="NewsList__head" datatime="2016-04-02">2016.04.02</time>
+                <span class="NewsList__body">【期間限定】さくら抹茶ラテ販売開始</span>
+            </li>
+        </ol>
+    </section>
+
+    <footer class="Footer">
+        <div class="l-row l-column">
+            <div class="Footer__head">
+                <a href="./" class="logo">Site Name</a>
+                <ul class="Menu Menu--sub">
+                    <li><a class="Menu__item" href="#">Services</a></li>
+                    <li><a class="Menu__item" href="#">Work</a></li>
+                    <li><a class="Menu__item" href="#">About us</a></li>
+                    <li><a class="Menu__item" href="#">Blog</a></li>
+                    <li><a class="Menu__item" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="Footer__body">
+                <p>Copyright information goes down here.</p>
+                <p><a href="#">Legal Notice</a></p>
+                <p><a href="#">Privacy policy</a></p>
+            </div>
+            <ul class="Footer__foot">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Flickr</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Yelp</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</div>
+
+<script src="./dist/js/main.min.js"></script>
+<script>
+    imageSlide('Slide', 2);
+</script>
+</body>
+</html>

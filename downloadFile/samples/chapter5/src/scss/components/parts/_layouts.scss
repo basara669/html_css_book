@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+// 1カラムでメインのコンテンツ幅に納める
+.l-column {
+  flex: 0 1 $base-content-width;
+  margin: 0 auto;
+  padding: 0 $space-unit;
+  max-width: $base-content-width;
+}
+
+// 横並びラッパー
+.l-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+// メインのコンテンツ幅に対して1/2の幅にする
+.l-halfColumn {
+  flex: 1 0 0px;
+  max-width: ($base-content-width - $column-space)/2;
+  margin-right: $column-space;
+  &:nth-child(even) {
+    margin-right: 0;
+   }
+}
+
+// メインのコンテンツ幅に対して1/4の幅にする
+.l-quaterColumn {
+  flex: 1 0 0px;
+  max-width: ($base-content-width - $column-space*3)/4;
+  margin-right: $column-space;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+// 100%画面幅に対して1/2の幅にする
+.l-halfTile {
+  display: flex;
+  flex: 1 1 50%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+// =====================
+// Section
+// ---------------------
+// ページの節
+// =====================
+
+.Section {
+    margin-bottom: $space-unit*2;
+    &__item {
+        margin-bottom: $space-unit*2;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

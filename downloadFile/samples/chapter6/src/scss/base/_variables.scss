@@ -1,0 +1,32 @@
+@charset 'utf-8';
+
+// colors
+$color-white: #fff;
+$color-black: #252525;
+
+$color-base: #fbf7f3;
+$color-main-text: #474747;
+$color-link: #878378;
+
+$color-reverse-line: #fff;
+$color-reverse-fill: #252525;
+
+
+// sizes
+$base-content-width: 1180px;
+$space-unit: 20px;
+$sp-space-unit: 15px;
+$column-space: $space-unit*2;
+
+// paths
+$image-path: "../images/";
+
+// fonts
+$font-sub: 'Lato';
+
+// break points
+$sp-max-width: 640px; 
+$pc-min-width: 641px; 
+$sp-menu-width: 200px;
+
+

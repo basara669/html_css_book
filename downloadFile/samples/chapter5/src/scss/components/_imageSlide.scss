@@ -1,0 +1,57 @@
+@charset 'utf-8';
+
+// =====================
+// ImageSlide
+// ---------------------
+// 画像カルーセル
+// =====================
+
+.ImageSlide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // 画像のラッパー
+    &__main {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    // 画像1つ分
+    &__item {
+        flex: 0 0 80%;
+    }
+    // 画像本体：高さに合わせてアス比を保つ指定
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+    // インジケーター領域
+    &__sub {
+        position: relative;
+        top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    // インジケーターの○ひとつぶん
+    &__dot {
+        display: block;
+        overflow: hidden;
+        margin-right: 20px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $color-black;
+        border-radius: 10px;
+        text-indent: 100%;
+        white-space: nowrap;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            background: rgba($color-black, .7);
+        }
+        &.isActive {
+            background: $color-black;
+        }
+    }
+}

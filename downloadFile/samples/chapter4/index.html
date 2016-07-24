@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Css Cafe</title>
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <header class="Header l-column">
+        <div class="Header__head">
+            <h1 class="logo">Site Name</h1>
+        </div>
+        <nav class="Header__body">
+            <ul class="Menu">
+                <li><a class="Menu__item" href="#">Services</a></li>
+                <li><a class="Menu__item" href="#">Work</a></li>
+                <li><a class="Menu__item" href="#">About us</a></li>
+                <li><a class="Menu__item" href="#">Blog</a></li>
+                <li><a class="Menu__item" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="l-column">
+        <div class="l-row">
+            <div class="EntryPanel l-halfColumn">
+                <div class="EntryPanel__sub">
+                    <img class="EntryPanel__thumb" src="./dist/images/top/entry1.jpg" alt="">
+                </div>
+                <div class="EntryPanel__main">
+                    <h3 class="EntryPanel__head">冬のコーヒーギフト</h3>
+                    <div class="EntryPanel__body">
+                        大切なあの方にありがとうを届けたい。心も体も温まる素敵なギフト。プレゼントキャンペーン実施中！
+                    </div>
+                    <div class="EntryPanel__foot"><a href="" class="button">READ MORE</a></div>
+                </div>
+            </div>
+            <div class="EntryPanel l-halfColumn">
+                <div class="EntryPanel__sub">
+                    <img class="EntryPanel__thumb" src="./dist/images/top/entry2.jpg" alt="">
+                </div>
+                <div class="EntryPanel__main">
+                    <h3 class="EntryPanel__head">あの人気店コラボメニュー</h3>
+                    <div class="EntryPanel__body">
+                        今話題の人気店、Macaro’n Thingsのパンケーキを使ったコラボ商品のセットメニューを販売中。
+                    </div>
+                    <div class="EntryPanel__foot"><a href="" class="button">READ MORE</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="./dist/js/main.min.js"></script>
+<script>
+    imageSlide('Slide', 2);
+</script>
+</body>
+</html>

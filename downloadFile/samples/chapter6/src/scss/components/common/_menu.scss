@@ -1,0 +1,62 @@
+@charset 'utf-8';
+
+.Menu {
+    display: flex;
+    justify-content: space-around;
+    @include menu-font;
+    @include mq-sp {
+        flex-direction: column;
+    }
+    &__item {
+        display: block;
+        padding: 10px 15px;
+        text-transform: uppercase;
+    }
+    // フッターのメニュー
+    &--sub {
+        flex-direction: column;
+    }
+}
+
+
+.SpMenu {
+    @include mq-sp {
+        position: fixed;
+        top: $sp-space-unit;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0s .3s ease;
+        .isOpened & {
+            opacity: 1;
+            transition: opacity 0s 0s ease;
+        }
+    }
+    // 本文のラッパー
+    &__wrapper {
+        left: 0;
+        width: 100%;
+        transition: left .3s 0s ease;
+        &.isOpened {
+            position: fixed;
+            left: $sp-menu-width;
+            z-index: 1;
+            box-shadow: 0 1px 10px rgba(black, .3);
+        }
+    }
+    // メニュー以外の部分をタップでメニュー開閉するためのオーバーレイ
+    &__overlay {
+        position: relative;
+        display: none;
+        .isOpened & {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: $sp-menu-width;
+            z-index: 2;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@charset 'utf-8';
+
+.EntryPanel {
+    display: flex;
+    align-items: center;
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-self: stretch;
+        flex: 1 1 55%;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    &__sub {
+        flex: 1 1 45%;
+        margin-right: 20px;
+    }
+    &__thumb {
+        width: 100%;
+        height: auto;
+    }
+    &__head {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    &__foot {
+        margin-top: 10px;
+        text-align: right;
+    }
+    &__body {
+        margin-top: 10px;
+        font-size: 14px;
+        @include mq-sp {
+            font-size: 12px;
+        }
+    }
+}

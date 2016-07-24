@@ -1,0 +1,42 @@
+@charset 'utf-8';
+
+// =====================
+// Overlay Panel
+// ---------------------
+// 写真背景の上にテキストを載せるパネル
+// =====================
+
+.OverlayPanel {
+    $root: &;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10% 20%;
+    background-color: rgba(0,0,0,.2);
+    color: $color-white;
+    &:hover {
+        color: $color-white;
+        background-color: rgba(0,0,0,.4);
+    }
+    &__head {
+        margin: 0 10%;
+        padding: 24px 36px;
+        border: 2px solid $color-white;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-size: 24px;
+        @include title-font;
+        #{$root}:hover & {
+            background-color: rgba(255,255,255,0.2);
+        }
+    }
+    &__body {
+        margin: 16px auto;
+        @include mq-sp {
+            display: none;
+        }
+    }
+}

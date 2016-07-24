@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./dist/css/main.min.css">
+ <style>
+  *{
+  	box-sizing:border-box;
+  	letter-spacing: 0.1em;
+  }
+  body{
+  	margin:50px;
+  }
+  h3{
+    margin-bottom: 0.3em;
+    margin-top:1.3em;
+  }
+  .wrap{
+  	border:1px #333 solid;
+  	width:500px;
+  	/*padding:10px;*/
+  }
+  .clear{
+  	clear:both;
+  }
+  .bg-1{
+  	background-color: #0278AE;
+  }
+  .bg-2{
+  	background-color: #51DACF;
+  }
+  .bg-3{
+  	background-color: #7AD8AF;
+  }
+  .bg-4{
+  	background-color: #E8FFC1;
+  }
+  .bg-5{
+  	background-color: #0278AE;
+  }
+  .bg-6{
+  	background-color: #9EF5CF;
+  }
+  .bg-7{
+  	background-color: #F06868;
+  }
+  .bg-8{
+  	background-color: #FAB57A;
+  }
+  </style>
+</head>
+<body>
+<style>
+.box1,.box2{
+	width:100px;
+	height:100px;
+	padding:10px;
+	color:#fff;
+	float:left;
+	border-radius: 10px;
+	margin:2px;
+}
+</style>
+<h1>float</h1>
+  <div class="wrap">
+  	<div class="box1 bg-7">float:left</div>
+  	<div class="box2 bg-8">float:left</div>
+  	<div class="clear"></div>
+  </div>
+<style>
+.flex-conteiner{
+	display: flex;
+	position: relative;
+}
+.flex-item{
+	width:100px;
+	height:100px;
+	padding:10px;
+	color:#fff;
+	border-radius: 10px;
+	margin:2px;
+	font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+}
+.label{
+	position: absolute;
+	top:0;
+	right:0;
+	background-color: #333;
+	color:#fff;
+	margin:0;
+	padding:5px;
+	font-size: 13px;
+}
+.wrapB{
+	background-color: #333;
+}
+.wrapB .flex-item{
+	font-size: 16px;
+    line-height: 1.2em;
+    padding: 30px 6px;
+}
+.wrapB .label{
+font-size: 16px;
+}
+</style>
+<h1>flexbox</h1>
+  <div class="wrap flex-conteiner">
+  	<div class="flex-item bg-7"></div>
+  	<div class="flex-item bg-8"></div>
+  	<p class="label">display:flex</p>
+  </div>
+
+<h1>flexbox2</h1>
+  <div class="wrap wrapB flex-conteiner">
+  	<div class="flex-item bg-7">Flexアイテム</div>
+  	<div class="flex-item bg-8">Flexアイテム</div>
+  	<p class="label">Flexコンテナ</p>
+  </div>
+<style>
+.wrap2{
+	height:150px;
+}
+.sample-2{
+	flex-wrap:wrap;
+}
+.sample-3{
+	justify-content:center;
+}
+.sample-4{
+	justify-content:space-between;
+}
+.sample-5{
+	align-items:center;
+}
+.sample-6{
+	justify-content:flex-end;
+}
+.sample-6 .flex-item:first-child{
+	margin-right: auto;
+}
+.sample-7{
+  flex-direction: column;
+}
+.sample-8{
+  justify-content:space-around;
+}
+
+
+/*.h-1{
+	height:50px;
+}
+.h-3{
+	height:70px;
+}*/
+</style>
+<h1>実務で使いそうなプロパティ</h1>
+<h2>横並びにしたい flex-direction:row</h2>
+   <div class="wrap flex-conteiner">
+   	<div class="flex-item bg-1">1</div>
+  	<div class="flex-item bg-2">2</div>
+   	<div class="flex-item bg-3">3</div>
+  	<div class="flex-item bg-1">4</div>
+  	<div class="flex-item bg-2">5</div>
+  	<div class="flex-item bg-3">6</div>
+  </div>
+<h2>横並びを折り返したい flex-wrap:wrap;</h2>
+<div class="wrap flex-conteiner sample-2">
+   	<div class="flex-item bg-1">1</div>
+  	<div class="flex-item bg-2">2</div>
+   	<div class="flex-item bg-3">3</div>
+  	<div class="flex-item bg-1">4</div>
+  	<div class="flex-item bg-2">5</div>
+  	<div class="flex-item bg-3">6</div>
+</div>
+<h2>水平中央寄せにしたい justify-content:center;</h2>
+<div class="wrap flex-conteiner sample-3">
+   	<div class="flex-item bg-1">1</div>
+  	<div class="flex-item bg-2">2</div>
+   	<div class="flex-item bg-3">3</div>
+</div>
+<h2>均等に配置したい justify-content:space-between;</h2>
+<div class="wrap flex-conteiner sample-4">
+   	<div class="flex-item bg-1">1</div>
+  	<div class="flex-item bg-2">2</div>
+   	<div class="flex-item bg-3">3</div>
+</div>
+<h2>垂直中央寄せにしたい align-items:center;</h2>
+<div class="wrap wrap2 flex-conteiner sample-5">
+   	<div class="flex-item bg-1 h-1">1</div>
+  	<div class="flex-item bg-2 h-2">2</div>
+   	<div class="flex-item bg-3 h-3">3</div>
+</div>
+<h2>上下左右中央寄せにしたい align-items:center;× justify-content:center;</h2>
+<div class="wrap wrap2 flex-conteiner sample-5 sample-3">
+   	<div class="flex-item bg-1 h-1">1</div>
+  	<div class="flex-item bg-2 h-2">2</div>
+   	<div class="flex-item bg-3 h-3">3</div>
+</div>
+<h2>右寄せ左寄せを混合させたい justify-content:flex-end; +</h2>
+<div class="wrap flex-conteiner sample-6">
+   	<div class="flex-item bg-1 h-1">1</div>
+  	<div class="flex-item bg-2 h-2">2</div>
+   	<div class="flex-item bg-3 h-3">3</div>
+</div>
+<h2>縦並びにしたい flex-direction: column;</h2>
+<div class="wrap flex-conteiner sample-7">
+    <div class="flex-item bg-1 h-1">1</div>
+    <div class="flex-item bg-2 h-2">2</div>
+    <div class="flex-item bg-3 h-3">3</div>
+</div>
+<h2>均等に配置で枠の左右にも余白を持たせたい justify-content:space-around;</h2>
+<div class="wrap flex-conteiner sample-8">
+    <div class="flex-item bg-1 h-1">1</div>
+    <div class="flex-item bg-2 h-2">2</div>
+    <div class="flex-item bg-3 h-3">3</div>
+</div>
+
+<style>
+.wrap3{
+  width:250px;
+}
+.wrap4{
+  width:400px;
+}
+.flex-item2{
+  width:80px;
+  height:80px;
+  padding:10px;
+  color:#fff;
+  border-radius: 10px;
+  margin:2px;
+  font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+}
+.direction1{
+  flex-direction:row;
+}
+.direction2{
+  flex-direction:row-reverse;
+}
+.direction3{
+  flex-direction:column;
+}
+.direction4{
+  flex-direction:column-reverse;
+}
+
+.fwrap1{
+  flex-wrap:nowrap;
+}
+.fwrap2{
+  flex-wrap:wrap;
+}
+.fwrap3{
+  flex-wrap:wrap-reverse;
+}
+
+.jc{
+  justify-content:flex-start;
+}
+.jc2{
+  justify-content:flex-end;
+}
+.jc3{
+  justify-content:center;
+}
+.jc4{
+  justify-content:space-between;
+}
+.jc5{
+  justify-content:space-around;
+}
+
+.ai{
+  align-items:flex-start;
+}
+.ai2{
+  align-items:flex-end;
+}
+.ai3{
+  align-items:center;
+}
+.ai4{
+  align-items:baseline;
+}
+.ai5{
+  align-items:stretch;
+}
+</style>
+<h1>プロパティ説明</h1>
+<h2>flex-direction</h2>
+<h3>row</h3>
+<div class="wrap flex-conteiner direction1">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+<h3>row-reverse</h3>
+<div class="wrap flex-conteiner direction2">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+<h3>column</h3>
+<div class="wrap wrap3 flex-conteiner direction3">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+<h3>column-reverse</h3>
+<div class="wrap wrap3 flex-conteiner direction4">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+
+<h2>flex-wrap</h2>
+<h3>row</h3>
+<div class="wrap wrap4 flex-conteiner fwrap1">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+  <div class="flex-item2 bg-2">5</div>
+  <div class="flex-item2 bg-3">6</div>
+</div>
+<h3>row-reverse</h3>
+<div class="wrap wrap4 flex-conteiner fwrap2">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+  <div class="flex-item2 bg-2">5</div>
+  <div class="flex-item2 bg-3">6</div>
+</div>
+<h3>column</h3>
+<div class="wrap wrap4 flex-conteiner fwrap3">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+  <div class="flex-item2 bg-2">5</div>
+  <div class="flex-item2 bg-3">6</div>
+</div>
+
+<h2>justify-content</h2>
+<h3>flex-start</h3>
+<div class="wrap flex-conteiner jc">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+<h3>flex-end</h3>
+<div class="wrap flex-conteiner jc2">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+<h3>center</h3>
+<div class="wrap flex-conteiner jc3">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+<h3>space-between</h3>
+<div class="wrap flex-conteiner jc4">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+<h3>space-around</h3>
+<div class="wrap flex-conteiner jc5">
+  <div class="flex-item2 bg-1">1</div>
+  <div class="flex-item2 bg-2">2</div>
+  <div class="flex-item2 bg-3">3</div>
+  <div class="flex-item2 bg-1">4</div>
+</div>
+<style>
+.flex-item2.heightA{
+  height:50px;
+  line-height: 30px;
+}
+.flex-item2.heightB{
+  height:60px;
+  line-height: 40px;
+}
+.ai5 .flex-item2{
+  height: auto;
+  line-height: 120px;
+}
+.group{
+  width:400px;
+  float: left;
+  margin-right: 20px;
+}
+</style>
+<h2>align-items</h2>
+<div class="group">
+  <h3>flex-start</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ai">
+    <div class="flex-item2 bg-1 heightA">1</div>
+    <div class="flex-item2 bg-2">2</div>
+    <div class="flex-item2 bg-3 heightB">3</div>
+    <div class="flex-item2 bg-1">4</div>
+  </div>
+</div>
+<div class="group">
+  <h3>flex-end</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ai2">
+    <div class="flex-item2 bg-1 heightA">1</div>
+    <div class="flex-item2 bg-2">2</div>
+    <div class="flex-item2 bg-3 heightB">3</div>
+    <div class="flex-item2 bg-1">4</div>
+  </div>
+</div>
+<div class="group">
+  <h3>center</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ai3">
+    <div class="flex-item2 bg-1 heightA">1</div>
+    <div class="flex-item2 bg-2">2</div>
+    <div class="flex-item2 bg-3 heightB">3</div>
+    <div class="flex-item2 bg-1">4</div>
+  </div>
+</div>
+<div class="group">
+  <h3>baseline</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ai4">
+    <div class="flex-item2 bg-1 heightA">1</div>
+    <div class="flex-item2 bg-2">2</div>
+    <div class="flex-item2 bg-3 heightB">3</div>
+    <div class="flex-item2 bg-1">4</div>
+  </div>
+</div>
+<div class="group">
+  <h3>stretch</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ai5">
+    <div class="flex-item2 bg-1 heightA">1</div>
+    <div class="flex-item2 bg-2">2</div>
+    <div class="flex-item2 bg-3 heightB">3</div>
+    <div class="flex-item2 bg-1">4</div>
+  </div>
+</div>
+<div class="clear"></div>
+<style>
+.flex-item3{
+  width:80px;
+  height:50px;
+  padding:10px;
+  color:#fff;
+  border-radius: 10px;
+  margin:2px;
+  font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.ac{
+  flex-wrap:wrap;
+  align-content:flex-start;
+}
+.ac2{
+  flex-wrap:wrap;
+  align-content:flex-end;
+}
+.ac3{
+  flex-wrap:wrap;
+  align-content:center;
+}
+.ac4{
+  flex-wrap:wrap;
+  align-content:space-between;
+}
+.ac5{
+  flex-wrap:wrap;
+  align-content:space-around;
+}
+</style>
+
+<h2>align-content</h2>
+<div class="group">
+  <h3>flex-start</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ac">
+    <div class="flex-item3 bg-1">1</div>
+    <div class="flex-item3 bg-2">2</div>
+    <div class="flex-item3 bg-3">3</div>
+    <div class="flex-item3 bg-1">4</div>
+    <div class="flex-item3 bg-2">5</div>
+    <div class="flex-item3 bg-3">6</div>
+    <div class="flex-item3 bg-1">7</div>
+    <div class="flex-item3 bg-2">8</div>
+  </div>
+</div>
+<div class="group">
+  <h3>flex-end</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ac2">
+    <div class="flex-item3 bg-1">1</div>
+    <div class="flex-item3 bg-2">2</div>
+    <div class="flex-item3 bg-3">3</div>
+    <div class="flex-item3 bg-1">4</div>
+    <div class="flex-item3 bg-2">5</div>
+    <div class="flex-item3 bg-3">6</div>
+    <div class="flex-item3 bg-1">7</div>
+    <div class="flex-item3 bg-2">8</div>
+  </div>
+</div>
+<div class="group">
+  <h3>center</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ac3">
+    <div class="flex-item3 bg-1">1</div>
+    <div class="flex-item3 bg-2">2</div>
+    <div class="flex-item3 bg-3">3</div>
+    <div class="flex-item3 bg-1">4</div>
+    <div class="flex-item3 bg-2">5</div>
+    <div class="flex-item3 bg-3">6</div>
+    <div class="flex-item3 bg-1">7</div>
+    <div class="flex-item3 bg-2">8</div>
+  </div>
+</div>
+<div class="group">
+  <h3>space-between</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ac4">
+    <div class="flex-item3 bg-1">1</div>
+    <div class="flex-item3 bg-2">2</div>
+    <div class="flex-item3 bg-3">3</div>
+    <div class="flex-item3 bg-1">4</div>
+    <div class="flex-item3 bg-2">5</div>
+    <div class="flex-item3 bg-3">6</div>
+    <div class="flex-item3 bg-1">7</div>
+    <div class="flex-item3 bg-2">8</div>
+  </div>
+</div>
+<div class="group">
+  <h3>space-around</h3>
+  <div class="wrap wrap2 wrap4 flex-conteiner ac5">
+    <div class="flex-item3 bg-1">1</div>
+    <div class="flex-item3 bg-2">2</div>
+    <div class="flex-item3 bg-3">3</div>
+    <div class="flex-item3 bg-1">4</div>
+    <div class="flex-item3 bg-2">5</div>
+    <div class="flex-item3 bg-3">6</div>
+    <div class="flex-item3 bg-1">7</div>
+    <div class="flex-item3 bg-2">8</div>
+  </div>
+</div>
+<div class="clear"></div>
+
+<style>
+.order span{
+  display: block;
+  font-size: 13px;
+}
+.order .flex-item2{
+  line-height: 38px;
+}
+.orderItem1{
+  order:1;
+}
+.orderItem2{
+  order:2;
+}
+.orderItem3{
+  order:3;
+}
+.orderItem4{
+  order:4;
+}
+.orderItem5{
+  order:5;
+}
+.orderItem6{
+  order:6;
+}
+</style>
+<h2>order</h2>
+<h3>order</h3>
+<div class="wrap flex-conteiner order">
+  <div class="flex-item2 bg-1 orderItem5">1<span>order:5</span></div>
+  <div class="flex-item2 bg-2 orderItem3">2<span>order:3</span></div>
+  <div class="flex-item2 bg-3 orderItem1">3<span>order:1</span></div>
+  <div class="flex-item2 bg-1 orderItem6">4<span>order:6</span></div>
+  <div class="flex-item2 bg-2 orderItem4">5<span>order:4</span></div>
+  <div class="flex-item2 bg-3 orderItem2">6<span>order:2</span></div>
+</div>
+</body>
+</html>
