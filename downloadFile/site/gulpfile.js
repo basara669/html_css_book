@@ -67,8 +67,16 @@ gulp.task('js', function() {
 });
 
 gulp.task('default', ['image', 'js', 'bs', 'scss', 'bs-reload'], function() {
-  gulp.watch([paths.htmlSrc], ['bs-reload']);
-  gulp.watch([paths.scssSrc], ['scss']);
-  gulp.watch([paths.imgSrc], ['image']);
-  gulp.watch([paths.jsSrc], ['js']);
+  $.watch([paths.htmlSrc],function(e) {
+    gulp.start("bs-reload")
+  });
+  $.watch([paths.scssSrc],function(e) {
+    gulp.start("scss")
+  });
+  $.watch([paths.imgSrc],function(e) {
+    gulp.start("image")
+  });
+  $.watch([paths.jsSrc],function(e) {
+    gulp.start("js")
+  });
 });
