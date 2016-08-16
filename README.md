@@ -1,4 +1,4 @@
-## 現場のプロが本気で教える HTML/CSSデザイン講義 サンプルデータダウンロード
+## 現場のプロが本気で教える HTML/CSSデザイン講義 サンプルデータ
 
 ![http://basara669.com/wp-content/uploads/2016/08/html_css_pro_3.jpg](http://basara669.com/wp-content/uploads/2016/08/html_css_pro_3.jpg)
 
