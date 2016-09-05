@@ -12,3 +12,25 @@
 - 表示されたダイアログ内の「DOWNLOAD ZIP」を押せばダウンロードが開始されます。
 
 ### 正誤表
+
+#### P192 上部HTML
+##### 誤
+
+```
+![http://basara669.com/wp-content/uploads/2016/09/e7e6e6a525fc9d645982f867cc88b99c.png](http://basara669.com/wp-content/uploads/2016/09/e7e6e6a525fc9d645982f867cc88b99c.png)
+
+```
+
+##### 正
+
+```
+（省略）
+<a class="IconPanel  l-quaterColumn">
+    <span class="IconPanel__icon  fa fa-tree"></span>
+    <h3 class="IconPanel__head">こだわりの空間</h3>
+    <p class="IconPanel__body">
+        ランチからディナーまでいつでもリラックスして使えるくつろぎ空間。椅子や壁、細部にまでこだわっています。
+    </p>
+</a>
+（省略）
+```
