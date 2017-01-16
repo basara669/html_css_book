@@ -131,6 +131,27 @@
 ```
 
 
+#### P108 中部コード部分
+##### 誤
+main.scssの1行目
+
+```scss
+
+@import "./modules/common/header";
+
+```
+
+
+##### 正
+modulesではなく、componentsが正しいです。
+
+```scss
+
+@import "./components/common/header";
+
+```
+
+
 #### P192 上部HTML
 ##### 誤
 
