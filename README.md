@@ -155,10 +155,15 @@ Class名は、「topicBox__topicDetail__text」のよう
 
 #### P095 18行目
 ##### 誤
+```html
 <img class="EntryPanel__thumb" src="./dist/images/top/entry2.jpg" alt="">
+```
 
 ##### 正
+
+```html
 <img class="EntryPanel__thumb" src="./dist/images/top/entry2.jpg" alt="" width="275" height="250">
+```
 
 #### P107 最初のコード
 min-heightとしているが、heightが正しい。これに伴い次のコードブロックのコンパイル後の結果のCSSも、  
