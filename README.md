@@ -141,11 +141,17 @@ Class名は、「topicBox__topicDetail__text」のよう
 
 #### P095 5行目
 ##### 誤
+
+```html
 <img class="EntryPanel__thumb" src="./dist/images/top/entry1.jpg" alt="">
 
-##### 正
-<img class="EntryPanel__thumb" src="./dist/images/top/entry1.jpg" alt="" width="275" height="250">
+```
 
+##### 正
+
+```html
+<img class="EntryPanel__thumb" src="./dist/images/top/entry1.jpg" alt="" width="275" height="250">
+```
 
 #### P095 18行目
 ##### 誤
