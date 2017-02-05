@@ -36,6 +36,12 @@
 
 
 ### 正誤表
+#### P10 上から8行目
+##### 誤
+開設時に使用します。
+##### 正
+解説時に使用します。
+
 #### P18 上部画像
 ##### 誤
 ![http://basara669.com/wp-content/uploads/2016/09/694d904d39b7b041f11d147c36f55994.png](http://basara669.com/wp-content/uploads/2016/09/694d904d39b7b041f11d147c36f55994.png)
@@ -54,7 +60,17 @@
 └── test.html
 
 ```
+#### p021 下から6行目
+##### 誤
+必要なものが正しくイントール
+##### 正
+必要なものが正しくインストール
 
+#### p022 下から7行目
+##### 誤
+これらインスールしたものを使って
+##### 正
+これらインストールしたものを使って
 
 #### P23 test.html
 ダウンロードに入っているHTMLの参照先とpタグが抜けているので追加をしてください。  
@@ -99,6 +115,77 @@
 
 ##### 正
 ブラウザでtest.htmlを開いてください。
+
+
+#### P049 下から2行目
+##### 誤
+詳細度をコントールしています。
+
+##### 正
+詳細度をコントロールしています。
+
+#### P050 下から4行目
+##### 誤
+対して、!imporatantはCSS内に作っているので、
+
+##### 正
+対して、!importantはCSS内に作っているので、
+
+#### P071 下から10行目
+##### 誤
+Class名は、「topicBox__topickDetail__text」のよう
+
+##### 正
+Class名は、「topicBox__topicDetail__text」のよう
+
+
+#### P095 5行目
+##### 誤
+<img class="EntryPanel__thumb" src="./dist/images/top/entry1.jpg" alt="">
+
+##### 正
+<img class="EntryPanel__thumb" src="./dist/images/top/entry1.jpg" alt="" width="275" height="250">
+
+
+#### P095 18行目
+##### 誤
+<img class="EntryPanel__thumb" src="./dist/images/top/entry2.jpg" alt="">
+
+##### 正
+<img class="EntryPanel__thumb" src="./dist/images/top/entry2.jpg" alt="" width="275" height="250">
+
+#### P107 最初のコード
+min-heightとしているが、heightが正しい。これに伴い次のコードブロックのコンパイル後の結果のCSSも、  
+min-heightではなく、heightとなる
+
+##### 誤
+
+```css
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 98px; //このコードが誤り
+  &__head {
+    //ここにHeader__headのスタイルを記述する
+  }
+}
+```
+
+##### 正
+```css
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 98px; //このコードが誤り
+  &__head {
+    //ここにHeader__headのスタイルを記述する
+  }
+}
+```
+
+
 
 #### P136 1行目
 「デザインカンプ通りのレイアウトになりました。」とありますが、この時点では、アスペクト比を修正しただけですので、「デザインカンプ通りのサイズになりました」が正しいです。
