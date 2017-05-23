@@ -341,17 +341,7 @@ modulesではなく、componentsが正しいです。
 
 ```
 
-#### P237 サンプルコードについて
-本文にあるコードブロックでは、0.3という表記になっていますが、サンプルコードでは、省略表記である.3となっています。  
-これは0を省略している書き方で、0.3も.3もどちらも同じ値を示しています。
-サンプルコードでは、`transition: opacity 0s .3s ease`や、`box-shadow: 0 1px 10px rgba(black, .3)`となっていますが、  
-それぞれ`transition: opacity 0s 0.3s ease`と`box-shadow: 0 1px 10px rgba(black, 0.3)`のことです。
-
-
-#### P237 コードブロックについて
-
-コードのサンプルでも、0.3を省略表記の.3となっています。こちらは`transition: opacity 0s .3s ease`  
-となっていますが、`transition: opacity 0s 0.3s ease`のことです。
+```
 
 
 #### P192 上部HTML
@@ -396,6 +386,43 @@ sassでコンパイルすると10pxとなりどちらも同じ値になります
 (省略)  
 ```
 
+
+
+#### P237 サンプルコードについて
+本文にあるコードブロックでは、0.3という表記になっていますが、サンプルコードでは、省略表記である.3となっています。  
+これは0を省略している書き方で、0.3も.3もどちらも同じ値を示しています。
+サンプルコードでは、`transition: opacity 0s .3s ease`や、`box-shadow: 0 1px 10px rgba(black, .3)`となっていますが、  
+それぞれ`transition: opacity 0s 0.3s ease`と`box-shadow: 0 1px 10px rgba(black, 0.3)`のことです。
+
+
+#### P237 コードブロックについて
+##### 誤
+
+```css
+
+.isOpend & {
+  opacity: 1;
+  transition: opacity 0s 0s ease;
+}
+
+```
+
+##### 正
+```css
+
+.isOpend & {
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0s 0s ease;
+}
+
+#### P246
+##### 誤
+
+
+##### 正
+
+
 #### P250 上部scss
 sassでコンパイルすると20pxとなりどちらも同じ値になりますが、P117ページとの整合上、以下は20pxと直接が適切です。
 
@@ -424,7 +451,7 @@ sassでコンパイルすると20pxとなりどちらも同じ値になります
 
 
 
-#### P111
+#### P251
 ##### 誤
 
 
