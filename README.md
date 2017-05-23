@@ -280,6 +280,45 @@ modulesではなく、componentsが正しいです。
 ```
 
 
+#### P124 中断の文章
+カンマが抜けているため、1,0,0pxが100pxになってしまっている
+
+##### 誤
+
+```
+自動的に幅が合わさるように、flexを100pxに指定します。
+```
+
+##### 正
+
+```
+自動的に幅が合わさるように、flexを1,0,0pxに指定します。
+```
+
+#### P151 コード部分
+##### 誤
+
+```css
+.sectionLabel {
+  (省略)
+  flex: 1 1 auto;
+  padding: 14px inherit;
+  padding-bottom: 14px;
+  (省略)
+}
+```
+
+##### 正
+```css
+.sectionLabel {
+  (省略)
+  flex: 1 1 auto;
+  padding: $space-unit;
+  padding-bottom: $space-unit*2;
+  (省略)
+}
+```
+
 #### P157 `_overlayPanel.scss`内9行目について
 
 `letter-spacing: .1em`となっていますが、こちらは誤りではございません。0を省略する書き方で、この書き方で0.1emとなります。
@@ -300,6 +339,36 @@ modulesではなく、componentsが正しいです。
 ```html
 <time class="NewsList__head" datetime="2016-10-12">2016.10.12</time>
 
+```
+
+``
+
+#### P191 下部のコードブロック
+##### 誤
+
+```css
+.IconPanel {
+  (省略)
+  $__icon {
+    (省略)
+    font-size: 26px;
+    color: $color-link;
+  }
+  (省略)
+}
+```
+
+##### 正
+```css
+.IconPanel {
+  (省略)
+  $__icon {
+    (省略)
+    font-size: 26px;
+    color: $color-gray;
+  }
+  (省略)
+}
 ```
 
 
