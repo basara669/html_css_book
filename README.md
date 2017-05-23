@@ -341,36 +341,17 @@ modulesではなく、componentsが正しいです。
 
 ```
 
-``
+#### P237 サンプルコードについて
+本文にあるコードブロックでは、0.3という表記になっていますが、サンプルコードでは、省略表記である.3となっています。  
+これは0を省略している書き方で、0.3も.3もどちらも同じ値を示しています。
+サンプルコードでは、`transition: opacity 0s .3s ease`や、`box-shadow: 0 1px 10px rgba(black, .3)`となっていますが、  
+それぞれ`transition: opacity 0s 0.3s ease`と`box-shadow: 0 1px 10px rgba(black, 0.3)`のことです。
 
-#### P191 下部のコードブロック
-##### 誤
 
-```css
-.IconPanel {
-  (省略)
-  $__icon {
-    (省略)
-    font-size: 26px;
-    color: $color-link;
-  }
-  (省略)
-}
-```
+#### P237 コードブロックについて
 
-##### 正
-```css
-.IconPanel {
-  (省略)
-  $__icon {
-    (省略)
-    font-size: 26px;
-    color: $color-gray;
-  }
-  (省略)
-}
-```
-
+コードのサンプルでも、0.3を省略表記の.3となっています。こちらは`transition: opacity 0s .3s ease`  
+となっていますが、`transition: opacity 0s 0.3s ease`のことです。
 
 
 #### P192 上部HTML
