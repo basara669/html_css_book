@@ -341,8 +341,24 @@ modulesではなく、componentsが正しいです。
 
 ```
 
-```
+#### P181
+##### 誤
 
+
+##### 正
+
+#### P184
+##### 誤
+
+
+##### 正
+
+
+#### P188
+##### 誤
+
+
+##### 正
 
 #### P192 上部HTML
 ##### 誤
@@ -362,6 +378,12 @@ modulesではなく、componentsが正しいです。
 </a>
 （省略）
 ```
+
+#### P196~P197
+##### 誤
+
+
+##### 正
 
 
 #### P221 中部scss
@@ -385,8 +407,6 @@ sassでコンパイルすると10pxとなりどちらも同じ値になります
 }
 (省略)  
 ```
-
-
 
 #### P237 サンプルコードについて
 本文にあるコードブロックでは、0.3という表記になっていますが、サンプルコードでは、省略表記である.3となっています。  
@@ -416,13 +436,32 @@ sassでコンパイルすると10pxとなりどちらも同じ値になります
   transition: opacity 0s 0s ease;
 }
 
-#### P246
+```
+
+#### P246 campaign.htmlのサンプルコード
+
+`Section__head`とあるdivが不要です。
+
 ##### 誤
 
+```html
+（省略）
+<section class="Section l-column">
+  <div class="Section__head"> //不要
+    <h2 class="sectionLabel">Title1</h2>
+  </div>  //不要
+</section>
+（省略）
+```
 
 ##### 正
-
-
+```html
+（省略）
+<section class="Section l-column">
+    <h2 class="sectionLabel">Title1</h2>
+</section>
+（省略）
+```
 #### P250 上部scss
 sassでコンパイルすると20pxとなりどちらも同じ値になりますが、P117ページとの整合上、以下は20pxと直接が適切です。
 
@@ -443,60 +482,113 @@ sassでコンパイルすると20pxとなりどちらも同じ値になります
           margin-right: 0;
       }
     }
-（省略）
+(省略)
+
 }
-（省略）
+(省略)
+
+```
+
+#### P251 campaign.html内
+##### 誤
+
+```html
+<section class="Section l-column">
+  <div class="Section__head"> //不要
+    <h2 class="sectionLabel">CAMPAIGN</h2>    
+  </div>  //不要
+    <div class="l-row">
+        <section class="EntryPanel EntryPanel--portrait l-tripartitionColumn"> // EntryPanel--vertical
+            <div class="EntryPanel__sub">
+                <img class="EntryPanel__thumb" src="./dist/images/campaign/cp_entry1.jpg" alt="フルーツとグラノーラ">
+            </div>
+            <div class="EntryPanel__main">
+                <h3 class="EntryPanel__head">1日のはじまりに</h3>
+                <div class="EntryPanel__body">
+                    大切なあの方にありがとうを届けたい。<br>心も体も温まる素敵なギフト。<br>プレゼントキャンペーン実施中
+                </div>
+                <div class="EntryPanel__foot"><a href="#" class="button">READ MORE</a></div>
+            </div>
+        </section>
 
 ```
 
 
+##### 正
 
-#### P251
+```html
+<section class="Section l-column">
+    <h2 class="sectionLabel">CAMPAIGN</h2>    
+    <div class="l-row">
+        <section class="EntryPanel EntryPanel--vertical l-tripartitionColumn">
+            <div class="EntryPanel__sub">
+                <img class="EntryPanel__thumb" src="./dist/images/campaign/cp_entry1.jpg" alt="フルーツとグラノーラ">
+            </div>
+            <div class="EntryPanel__main">
+                <h3 class="EntryPanel__head">1日のはじまりに</h3>
+                <div class="EntryPanel__body">
+                    大切なあの方にありがとうを届けたい。<br>心も体も温まる素敵なギフト。<br>プレゼントキャンペーン実施中
+                </div>
+                <div class="EntryPanel__foot"><a href="#" class="button">READ MORE</a></div>
+            </div>
+        </section>
+
+```
+
+#### P255 下部の_campaign.scssの解説文とコード
+
+`display:block`とするところが、`flex`となっている
+
 ##### 誤
+
+これまで通り、「display」を「flex」にし、
+
+```scss
+
+.Campaign {
+  &__sweets {
+    display:flex;
+  }
+}
+
+```
+
+##### 正
+「display」に「block」を設定し、
+```scss
+
+.Campaign {
+  &__sweets {
+    display: block;
+  }
+}
+
+```
+
+#### P260 上部の `_campaign.scss`内のコード
+##### 誤
+
+```scss
+.Campaign {
+  (省略)
+  &__items {
+  (省略)
+  }
+  (省略)
+}
+
+```
 
 
 ##### 正
 
+```scss
+.Campaign {
+  (省略)
+  &__main {
+  (省略)
+  }
+  (省略)
+}
 
-
-#### P111
-##### 誤
-
-
-##### 正
-
-
-
-#### P111
-##### 誤
-
-
-##### 正
-
-
-#### P111
-##### 誤
-
-
-##### 正
-
-
-#### P111
-##### 誤
-
-
-##### 正
-
-
-#### P111
-##### 誤
-
-
-##### 正
-
-
-#### P111
-##### 誤
-
-
-##### 正
+```
