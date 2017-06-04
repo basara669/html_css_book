@@ -200,6 +200,26 @@ min-heightではなく、heightとなる
 }
 ```
 
+#### P108 中部コード部分
+##### 誤
+main.scssの1行目
+
+```scss
+
+@import "./modules/common/header";
+
+```
+
+
+##### 正
+modulesではなく、componentsが正しいです。
+
+```scss
+
+@import "./components/common/header";
+
+```
+
 #### P111 最初のコードブロック
 ##### 誤
 
@@ -227,6 +247,22 @@ min-heightではなく、heightとなる
 ```
 
 
+
+
+#### P124 中段の文章
+カンマが抜けているため、1,0,0pxが100pxになってしまっている
+
+##### 誤
+
+```
+自動的に幅が合わさるように、flexを100pxに指定します。
+```
+
+##### 正
+
+```
+自動的に幅が合わさるように、flexを1,0,0pxに指定します。
+```
 
 #### P136 1行目
 「デザインカンプ通りのレイアウトになりました。」とありますが、この時点では、アスペクト比を修正しただけですので、「デザインカンプ通りのサイズになりました」が正しいです。
@@ -259,28 +295,31 @@ min-heightではなく、heightとなる
 ```
 
 
-#### P108 中部コード部分
+#### P146 index.htmlのコードブロック内
+不要なclassが着いてしまっている
+
 ##### 誤
-main.scssの1行目
 
-```scss
-
-@import "./modules/common/header";
-
+```html
+<div class="Section__body l-row"> // Section__bodyが不要
+  <div class="EntryPanel l-halfColumn">
+    (省略)
+  </div>
+</div>
 ```
-
 
 ##### 正
-modulesではなく、componentsが正しいです。
 
-```scss
-
-@import "./components/common/header";
-
+```html
+<div class="l-row">
+  <div class="EntryPanel l-halfColumn">
+    (省略)
+  </div>
+</div>
 ```
 
 
-#### P124 中断の文章
+#### P148 中段の文章
 カンマが抜けているため、1,0,0pxが100pxになってしまっている
 
 ##### 誤
@@ -294,6 +333,7 @@ modulesではなく、componentsが正しいです。
 ```
 自動的に幅が合わさるように、flexを1,0,0pxに指定します。
 ```
+
 
 #### P151 コード部分
 ##### 誤
@@ -347,12 +387,34 @@ modulesではなく、componentsが正しいです。
 
 ##### 正
 
-#### P184
+#### P184 main.scss内
+コードとしては問題ありませんが、整理として`_footer.scss`の記述場所がズレている。
 ##### 誤
 
+```scss
+（省略）
+//フッター
+@import "./components/common/footer";
+
+//Common
+//----------------------------
+//ヘッダー
+@import "./components/common/header";
+(省略)
+```
 
 ##### 正
+```scss
+（省略）
+//Common
+//----------------------------
+//ヘッダー
+@import "./components/common/header";
 
+//フッター
+@import "./components/common/footer";
+(省略)
+```
 
 #### P188
 ##### 誤
