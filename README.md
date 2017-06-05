@@ -279,35 +279,9 @@ modulesではなく、componentsが正しいです。
 「デザインカンプ通りのレイアウトになりました。」とありますが、この時点では、アスペクト比を修正しただけですので、「デザインカンプ通りのサイズになりました」が正しいです。
 その後のP143でデザインカンプ通りになります。
 
-#### P156 下部scss
-##### 誤
-![http://basara669.com/wp-content/uploads/2016/09/9a82cb177e68a01b3d82b6779fb860ab.png](http://basara669.com/wp-content/uploads/2016/09/9a82cb177e68a01b3d82b6779fb860ab.png)
-
-
-##### 正
-
-```scss
-.OverlayPanel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%; //widthが必要です。
-    padding: 10% 20%;
-    background-color: rgba(0,0,0,.2);
-    color: $color-white;
-    &:hover {
-        color: $color-white;
-        background-color: rgba(0,0,0,.4);
-    }
-}
-
-
-```
-
 
 #### P146 index.htmlのコードブロック内
-不要なclassが着いてしまっている
+不要なclassがついている
 
 ##### 誤
 
@@ -347,6 +321,8 @@ modulesではなく、componentsが正しいです。
 
 
 #### P151 コード部分
+記述が間違っていました。
+
 ##### 誤
 
 ```css
@@ -369,6 +345,35 @@ modulesではなく、componentsが正しいです。
   (省略)
 }
 ```
+
+#### P156 下部scss
+##### 誤
+![http://basara669.com/wp-content/uploads/2016/09/9a82cb177e68a01b3d82b6779fb860ab.png](http://basara669.com/wp-content/uploads/2016/09/9a82cb177e68a01b3d82b6779fb860ab.png)
+
+
+##### 正
+
+```scss
+.OverlayPanel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; //widthが必要です。
+    padding: 10% 20%;
+    background-color: rgba(0,0,0,.2);
+    color: $color-white;
+    &:hover {
+        color: $color-white;
+        background-color: rgba(0,0,0,.4);
+    }
+}
+
+
+```
+
+
+
 
 #### P157 `_overlayPanel.scss`内9行目について
 
@@ -485,11 +490,14 @@ modulesではなく、componentsが正しいです。
 #### P196~P197 本文1行目
 表現がわかりづらいというコメントをいただきましたので、正確には以下のような内容です。
 ##### 誤
+```
 今作った「SNS」というclassと「SNS__text」というclassを、HTMLに付与します。
+```
 
 ##### 正
+```
 今作った「SNS」というclassと、後述する「SNS__text」というclassも併せて、HTMLに付与します。
-
+```
 
 #### P221 中部scss
 sassでコンパイルすると10pxとなりどちらも同じ値になりますが、P117ページとの整合上、以下は10pxと直接が適切です。  
@@ -545,7 +553,7 @@ sassでコンパイルすると10pxとなりどちらも同じ値になります
 
 #### P246 campaign.htmlのサンプルコード
 
-`Section__head`とあるdivが不要です。
+`Section__head`というclassのついているdivが不要です。
 
 ##### 誤
 
@@ -595,6 +603,8 @@ sassでコンパイルすると20pxとなりどちらも同じ値になります
 ```
 
 #### P251 campaign.html内
+不要なdivタグがある。
+
 ##### 誤
 
 ```html
@@ -671,6 +681,7 @@ sassでコンパイルすると20pxとなりどちらも同じ値になります
 ```
 
 #### P260 上部の `_campaign.scss`内のコード
+`&__main`としなくてはいけないのに、`&__items`となっている。
 ##### 誤
 
 ```scss
