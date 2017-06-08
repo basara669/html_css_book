@@ -468,6 +468,39 @@ modulesではなく、componentsが正しいです。
 ```
 
 
+
+#### P191 `_iconPanel.scss`内
+`$color-gray`とするべきところが、`$color-link`となっている
+
+##### 誤
+
+```scss
+.IconPanel {
+  (省略)
+  &__icon {
+    margin-bottom: $space-unit;
+    padding: $sp-space-unit;
+    font-size: 26px;
+    color: $color-link; //$color-grayが正しい
+  }
+  (省略)
+}
+```
+
+##### 正
+```scss
+.IconPanel {
+  (省略)
+  &__icon {
+    margin-bottom: $space-unit;
+    padding: $sp-space-unit;
+    font-size: 26px;
+    color: $color-gray;
+  }
+  (省略)
+}
+```
+
 #### P192 上部HTML
 ##### 誤
 
