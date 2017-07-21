@@ -259,6 +259,33 @@ modulesではなく、componentsが正しいです。
 
 
 
+#### P118 Tips部コード
+##### 誤
+_enrtyPanel.scssの２行目
+
+```css
+    &__thumb {
+```
+
+##### 正
+&__thumbではなく、&__subが正しいです。
+```css
+    &__sub {
+```
+##### 誤
+_enrtyPanel.scssの９行目
+
+```css
+    &__img {
+```
+
+##### 正
+&__imgではなく、&__thumbが正しいです。
+```css
+    &__thumb {
+```
+
+
 
 #### P124 中段の文章
 カンマが抜けているため、1,0,0pxが100pxになってしまっている
